@@ -16,5 +16,29 @@ namespace Traversal.Models
                 Description = $"* Parola uzuluğu minimum {length} karakter olmalıdır."
             };
         }
+        public override IdentityError PasswordRequiresUpper()
+        {
+            return new IdentityError()
+            {
+                Code = "PasswordRequiresUpper",
+                Description = "* Parola En Az Bir Büyük Harf İçermelidir."
+            };
+        }
+        public override IdentityError PasswordRequiresNonAlphanumeric()
+        {
+            return new IdentityError()
+            {
+                Code = "PasswordRequiresNonAlphanumeric",
+                Description = "* Parola En Az Bir karakter içermelidir.(.*??=)"
+            };
+        }
+        public override IdentityError PasswordRequiresDigit()
+        {
+            return new IdentityError()
+            {
+                Code = "PasswordRequiresDigit",
+                Description = "* Parola En Az Bir Rakam İçermelidir."
+            };
+        }
     }
 }

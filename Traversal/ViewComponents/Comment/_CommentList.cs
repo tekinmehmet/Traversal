@@ -11,6 +11,7 @@ namespace Traversal.ViewComponents.Comment
     public class _CommentList:ViewComponent
     {
         CommentManager commentManager = new CommentManager(new EFCommentDal());
+        [HttpGet]
         public IViewComponentResult Invoke(int id)
         {
             var values = commentManager.GetListByFilter(id);

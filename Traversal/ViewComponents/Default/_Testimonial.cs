@@ -11,6 +11,7 @@ namespace Traversal.ViewComponents.Default
     public class _Testimonial:ViewComponent
     {
         TestimonialManager testimonialManager = new TestimonialManager(new EFTestimonialDal());
+        [HttpGet]
         public IViewComponentResult Invoke()
         {
             var values = testimonialManager.TGetList();

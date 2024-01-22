@@ -11,6 +11,7 @@ namespace Traversal.ViewComponents.Default
     public class _PopularDestination:ViewComponent
     {
         DestinationManager destinationManager = new DestinationManager(new EFDestinationDal());
+        [HttpGet]
         public IViewComponentResult Invoke()
         {
             var values = destinationManager.TGetList();

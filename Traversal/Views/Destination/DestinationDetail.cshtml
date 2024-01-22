@@ -164,8 +164,8 @@
                     @*//yotumların listesi*@
                     @await Component.InvokeAsync("_CommentList",new { id = Model.DestinationId })
 
-                    @*//yotum bırakın*@
-                    @await Component.InvokeAsync("_AddComment")
+                    @*//yorum bırakın*@
+                    @await Html.PartialAsync("~/Views/Comment/AddComment.cshtml")
                     
                 </div>
             </div>

@@ -8,6 +8,7 @@ namespace Traversal.ViewComponents.Default
 {
     public class _SliderPartial:ViewComponent
     {
+        [HttpGet]
         public IViewComponentResult Invoke()
         {
             return View();

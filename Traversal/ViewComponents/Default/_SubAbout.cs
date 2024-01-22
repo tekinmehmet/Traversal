@@ -11,6 +11,7 @@ namespace Traversal.ViewComponents.Default
     public class _SubAbout : ViewComponent
     {
         SubAboutManager subAboutManager = new SubAboutManager(new EFSubAboutDal());
+        [HttpGet]
         public IViewComponentResult Invoke()
         {
             var values = subAboutManager.TGetList();

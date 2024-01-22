@@ -49,6 +49,7 @@ namespace DataAccessLayer.Repository
         {
             using var c = new Context();
             c.Add(t);
+            c.SaveChanges();
 
         }
 
@@ -56,6 +57,7 @@ namespace DataAccessLayer.Repository
         {
             using var c = new Context();
             c.Update(t);
+            c.SaveChanges();
         }
     }
 }

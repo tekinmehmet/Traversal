@@ -12,6 +12,7 @@ namespace Traversal.ViewComponents.Default
     public class _Feature:ViewComponent
     {
         FeatureManager featureManager = new FeatureManager(new EFFeatureDal());
+        [HttpGet]
         public IViewComponentResult Invoke()
         {
             var values = featureManager.TGetList();

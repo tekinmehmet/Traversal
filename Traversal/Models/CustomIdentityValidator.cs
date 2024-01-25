@@ -40,5 +40,14 @@ namespace Traversal.Models
                 Description = "* Parola En Az Bir Rakam İçermelidir."
             };
         }
+        public override IdentityError PasswordRequiresLower()
+        {
+            return new IdentityError()
+            {
+                Code = "PasswordRequiresLower",
+                Description = "* Şifrelerde en az bir küçük harf ('a'-'z') bulunmalıdır."
+
+            };
+        }
     }
 }
